@@ -1,3 +1,17 @@
 @charset "utf-8";
 @import "fonts.scss";
 @import "mybulma.scss";
+
+
+.banner {
+  display: block;
+  padding-bottom: 2ex;
+  & .line{
+    display: block;
+    line-height: 95%;
+  }
+}
+
+footer{
+  font-size: 60%;
+}
