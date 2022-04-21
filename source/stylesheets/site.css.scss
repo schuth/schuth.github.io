@@ -3,15 +3,40 @@
 @import "mybulma.scss";
 
 
-.banner {
-  display: block;
-  padding-bottom: 2ex;
-  & .line{
+header {
+
+
+  .banner {
     display: block;
-    line-height: 95%;
+    font-family: "iA Writer Mono";
+
+    & .line {
+      display: block;
+      line-height: 120%;
+    }
   }
 }
 
-footer{
+ol.navigation {
+  list-style: none;
+
+  li {
+    display: inline-block;
+
+    &::after {
+      content: ' ::';
+    }
+
+    &:nth-last-child(1):after {
+      content: '';
+    }
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+
+footer {
   font-size: 60%;
 }

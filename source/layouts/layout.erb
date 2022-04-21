@@ -10,19 +10,28 @@
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
-    <%= partial "banner" %>
     
-    <div class="container"><%= yield %></div>
+    <%= partial "header" %>
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          All contents (c) Sebastian Schuth.
-        </p>
-        <p>
-          Articles reflect my own opinion - I do not speak for my employer here.
-        </p>
+    <div class="container px-5">
+      <ol role="navigation" class="navigation">
+        <li><%= link_to 'Home', '/index.html' %></li>
+        <li><%= link_to 'About', '/about.html' %></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/lists.html">Lists</a></li>
+      </ol>
+    </div>
+    
+    <div class="container px-5 pt-5">
+      <div class="content">
+        <div class="columns">
+          <div class="column is-three-quarters">
+            <%= yield %>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+
+    <%= partial "footer" %>
   </body>
 </html>
