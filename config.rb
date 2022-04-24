@@ -1,3 +1,4 @@
+Time.zone = "Berlin"
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -6,6 +7,13 @@ activate :autoprefixer do |prefix|
 end
 
 activate :livereload
+
+activate :blog do |blog|
+  blog.permalink = "articles/{year}/{month}/{day}/{title}.html"
+  blog.layout = "article"
+  blog.sources = "articles/{year}-{month}-{day}-{title}.html"
+  blog.summary_separator = /MORE/
+end
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/

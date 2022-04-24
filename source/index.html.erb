@@ -1,0 +1,16 @@
+<div class="articles-home">
+    <% blog.articles[0...3].each do |article| %>
+        <article>
+            <h6><a title="permalink" href="<%= article.url %>"><%= article.date.strftime('%Y-%m-%d') %></a></h6>
+            <h5><%= article.title %></h5>
+            
+                <%= article.body %>
+            
+            <hr/>
+        </article>
+    <% end %>
+</div>
+
+<% if blog.articles.size > 3 %>
+    <a href="/archive.html">Older articles</a>
+<% end %>

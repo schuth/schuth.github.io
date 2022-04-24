@@ -6,11 +6,6 @@ title: About this page
 
 My name is Sebastian. I program machines for fun and profit.
 
-This page is about my own professional, IT-related thinking. Often, I will be wrong, sometimes, I might be right.
-
-The main reason I do the writing you can find on my pages is to clarify what I think about the topics I write about.
-Also, this gives me a place to reference when arguing about professional topics.
-
 It almost certian that you will disagree with things I write from time to time. As much as I like a good discussion, I do not want to discus topics with people on my page. 
 This is why you will _not_ find any feedback forms or other commenting functionality on this page. 
 

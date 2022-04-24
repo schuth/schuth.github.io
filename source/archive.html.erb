@@ -1,0 +1,16 @@
+<h1>Archive</h1>
+
+<ol>
+  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+        <% blog.articles.group_by {|a| a.date.month }.each do |month, articles| %>
+            <li>
+                <h5><%= year %>-<%= month %></h5>
+                <ol>
+                    <% articles.each do |article| %>
+                       <li><a href="<%= article.url %>"><%= article.title %></a></li>
+                    <% end %>
+                </ol>
+            </li>
+        <% end %>
+  <% end %>
+</ol>

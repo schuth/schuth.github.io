@@ -4,8 +4,6 @@
 
 
 header {
-
-
   .banner {
     display: block;
     font-family: "iA Writer Mono";
@@ -14,6 +12,22 @@ header {
       display: block;
       line-height: 120%;
     }
+
+    & span.author-line-inline {
+      @include until-widescreen {
+        display: none;
+      }
+    }
+
+    & span.author-line-below {
+      padding-top: 1rem;
+      display: inline-block;
+
+      @include widescreen-only {
+        display: none;
+      }
+    }
+
   }
 }
 
@@ -39,4 +53,42 @@ a {
 
 footer {
   font-size: 60%;
+}
+
+.article-list {
+  article {
+    background-color: rgb(236, 235, 235);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.articles-home {
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-style: double;
+    border-radius: 0.2rem;
+    border-width: 2px;
+    border-color: darkgray;
+    max-width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content article h6 a {
+  font-size: small;
+  font-weight: normal;
+}
+
+.footnotes {
+  display: block;
+  font-size: smaller;
+  margin-top: 3rem;
 }
