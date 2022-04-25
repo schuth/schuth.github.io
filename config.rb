@@ -1,4 +1,24 @@
 Time.zone = "Berlin"
+feed = Hash.new
+feed[:host] = 'https://www.blueelk.de'
+
+feed[:title] = 'blueelk'
+feed[:description] = 'Writing by Sebastian Schuth'
+feed[:feed_url] = '/feed.json'
+feed[:home_page_url] = '/'
+feed[:icon] = ''
+feed[:favicon] = '/favicon.ico'
+feed[:expired] = false
+feed[:authors] = [
+  {"name" => "Sebastian Schuth", "url" => nil, "avatar" => nil}
+]
+feed[:language] = "en"
+# for backwards compatibility to json feed 1.0,
+# we fall back to the first of all mentioned authors
+feed[:author]  = feed[:authors].first 
+
+config[:json_feed] = feed
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 

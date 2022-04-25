@@ -1,8 +1,8 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = "http://www.blueelk.de/"
-  xml.title "blueelk"
-  xml.subtitle "Writing by Sebastian Schuth"
+  site_url = config[:json_feed][:host]
+  xml.title config[:site_title]
+  xml.subtitle config[:site_description]
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"

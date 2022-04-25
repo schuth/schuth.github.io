@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<%=
+require 'json'
+data = config[:json_feed].dup
+    
+items = blog.articles.map do |article|
+    {
+        "id" => Digest::MD5.hexdigest(article.url),
+        "title" => article.title,
+        "summary" =>  article.summary,
+        "content_html" => article.body,
+        "url" => article.url,
+        "date_published" => article.date.rfc3339(),
+        "date_updated" => article.date.rfc3339(),
+        "author" => article.data.author || config[:json_feed][:author]["name"]
+    }
+end
+data["version"] = "https://jsonfeed.org/version/1",
+data["items"] = items
+if config[:debug_json_feed]
+    JSON.pretty_generate(data) 
+else 
+    JSON.generate(data) 
+end
+%>

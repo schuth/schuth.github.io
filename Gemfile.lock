@@ -34,12 +34,17 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
+    handlebars-engine (0.3.3)
+      handlebars-source
+      mini_racer
+    handlebars-source (4.7.7)
     hashie (3.6.0)
     http_parser.rb (0.8.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     kramdown (2.3.1)
       rexml
+    libv8-node (16.10.0.0-arm64-darwin)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -88,6 +93,8 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    mini_racer (0.6.2)
+      libv8-node (~> 16.10.0.0)
     minitest (5.15.0)
     nokogiri (1.13.4-arm64-darwin)
       racc (~> 1.4)
@@ -113,6 +120,9 @@ GEM
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
+    tilt-handlebars (2.0.0)
+      handlebars-engine
+      tilt (>= 1.3)
     toml (0.3.0)
       parslet (>= 1.8.0, < 3.0.0)
     tzinfo (2.0.4)
@@ -132,6 +142,7 @@ DEPENDENCIES
   middleman-blog (~> 4.0)
   middleman-livereload (~> 3.4)
   nokogiri (~> 1.13)
+  tilt-handlebars (~> 2.0, >= 2.0.0)
   tzinfo-data
   wdm (~> 0.1)
 
