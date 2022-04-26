@@ -90,7 +90,7 @@ GEM
       toml
       uglifier (~> 3.0)
       webrick
-    middleman-deploy (1.0.0)
+    middleman-deploy (2.0.0.pre.alpha)
       middleman-core (>= 3.2)
       net-sftp
       ptools
@@ -152,7 +152,7 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer (~> 3.0)
   middleman-blog (~> 4.0)
-  middleman-deploy (~> 1.0)
+  middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload (~> 3.4)
   nokogiri (~> 1.13)
   tilt-handlebars (~> 2.0, >= 2.0.0)
