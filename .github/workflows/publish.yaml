@@ -13,8 +13,14 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: bundle exec middleman deploy --build-before
-
+      - run: NO_CONTRACTS=true bundle exec middleman build
+      - uses: casperdcl/push-dir@v1
+        with:
+          message: update static site
+          branch: gh-pages
+          dir: build
+          history: false
+          nojekyll: true
       # -
       #   name: Deploy to GitHub Pages
       #   if: success()
