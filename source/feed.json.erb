@@ -9,17 +9,17 @@ items = blog.articles.map do |article|
     {
         "id" => Digest::MD5.hexdigest(article.url),
         "title" => article.title,
-        "summary" =>  article.summary,
+        "summary" =>  article.data.feed_summary || nil,
         "content_html" => article.body,
         "url" => article.url,
         "date_published" => article.date.rfc3339(),
         "date_updated" => article.date.rfc3339(),
-        "author" => article.data.author || config[:json_feed][:author]["name"]
+        "tags" => article.tags
     }
 end
 data["version"] = "https://jsonfeed.org/version/1",
 data["items"] = items
-if config[:debug_json_feed]
+if config[:pretty_json_feed]
     JSON.pretty_generate(data) 
 else 
     JSON.generate(data) 

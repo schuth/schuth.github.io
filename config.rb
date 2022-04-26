@@ -19,6 +19,11 @@ feed[:author]  = feed[:authors].first
 
 config[:json_feed] = feed
 
+configure :development do
+  config[:pretty_json_feed] = true
+end
+
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -74,3 +79,5 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+
