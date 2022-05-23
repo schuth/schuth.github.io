@@ -45,6 +45,7 @@ GEM
     kramdown (2.3.1)
       rexml
     libv8-node (16.10.0.0-arm64-darwin)
+    libv8-node (16.10.0.0-x86_64-linux)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -98,6 +99,8 @@ GEM
     minitest (5.15.0)
     nokogiri (1.13.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.4-x86_64-linux)
+      racc (~> 1.4)
     padrino-helpers (0.15.1)
       i18n (>= 0.6.7, < 2)
       padrino-support (= 0.15.1)
@@ -134,6 +137,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   builder (~> 3.2, >= 3.2.2)

@@ -19,7 +19,11 @@
       <div class="content">
         <div class="columns">
           <div class="column">
-            <%= yield %>
+            <article>
+              <h6><%= current_page.date.strftime('%Y-%m-%d') %></a></h6>
+              <h5><%= current_page.data.title %></h5>
+              <%= yield %>
+            </article>
           </div>
         </div>
       </div>

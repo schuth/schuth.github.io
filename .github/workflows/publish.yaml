@@ -1,0 +1,23 @@
+name: publish blog
+
+on: 
+  push:
+    branches: 
+      - feature/workflow
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: NO_CONTRACTS=true bundle exec middleman build
+      - uses: casperdcl/push-dir@v1
+        with: 
+          message: update static site
+          branch: gh-pages
+          dir: build
+          history: false
+          nojekyll: true
