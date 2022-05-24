@@ -6,7 +6,7 @@ title: About this page
 
 My name is Sebastian. I program machines for fun and profit.
 
-It almost certian that you will disagree with things I write from time to time. As much as I like a good discussion, I do not want to discus topics with people on my page. 
+It is almost certian that you will disagree with things I write from time to time. As much as I like a good discussion, I do not want to discus topics with people on my page. 
 This is why you will _not_ find any feedback forms or other commenting functionality on this page. 
 
 If you disagree, I urge you to write about how and why, and link to this page. If this forces you to set up your own place for writing: great!
@@ -19,7 +19,7 @@ The blog and all pages are compiled into plain html by [middleman][7].
 
 For CSS, I use [Bulma][8] as basis, customized by using [SASS][9] to compile custom CSS as well as to bend Bulma to my taste.
 
-This blog uses fonts created and shared by by [Information Architects][6]. Thanks for making them accessible. 
+This blog uses fonts created and shared by [Information Architects][6]. Thanks for making them accessible. 
 
 Their iA Writer is a great tool - [check it out here][5].
 
