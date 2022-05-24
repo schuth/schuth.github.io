@@ -1,6 +1,6 @@
-— 
+---
 title: finicky: managing multiple browsers, task by task
-—
+---
 
 I like Safari on the Mac.
 
