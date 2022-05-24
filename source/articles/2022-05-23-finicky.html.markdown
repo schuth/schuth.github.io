@@ -1,0 +1,15 @@
+— 
+title: finicky: managing multiple browsers, task by task
+—
+
+I like Safari on the Mac.
+
+But, at the same time, I use some Google services, which feel shaky and broken on Safari, and have a reduced feature set when running on my browser of choice [^1].
+
+So, I have to install Chrome, but want to open only very specific links on that browser. 
+
+Enter [finicky](https://github.com/johnste/finicky), a powerful, power-user oriented way to choose the default browser based on the URL being opened.
+
+Beyond the basics, finicky adds some nice tricks, like choosing Chrome profiles based on URL, too. Enough to play around and get down the rabbit hole, if you like.
+
+[^1]: https://en.wikipedia.org/wiki/Honi_soit_qui_mal_y_pense
